@@ -1,10 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',       // 強制輸出為靜態檔案
+  output: 'export',
   images: {
-    unoptimized: true,    // GitHub Pages 不支援預設圖片優化
+    unoptimized: true,
   },
+  // 這是解決路徑問題的關鍵
+  basePath: '/alphaforge-frontend',
+  assetPrefix: '/alphaforge-frontend/', 
 };
 
 export default nextConfig;
